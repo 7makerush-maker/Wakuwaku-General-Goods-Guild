@@ -11,6 +11,10 @@
 body{font-family:'Noto Sans KR',sans-serif;background:#0f0f0f;color:#f0f0f0;min-height:100vh;-webkit-tap-highlight-color:transparent}
 a{text-decoration:none;color:inherit}
 .header{background:#111;border-bottom:1px solid #222;padding:16px 20px;position:sticky;top:0;z-index:100}
+.mascot{width:38px;height:38px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 2px 6px rgba(255,75,75,0.35));transition:transform 0.3s ease;cursor:pointer;animation:mascotBob 3s ease-in-out infinite}
+.mascot:hover{transform:rotate(-8deg) scale(1.1)}
+@keyframes mascotBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@media(min-width:768px){.mascot{width:44px;height:44px}}
 .header-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .logo{font-size:20px;font-weight:700;color:#ff4b4b;letter-spacing:-0.5px}
 .logo span{color:#fff}
@@ -81,9 +85,9 @@ a{text-decoration:none;color:inherit}
 </head>
 <body>
 
-<div class="header">
-  <div class="header-top">
-    <div class="logo">와쿠와쿠<span>잡화상단</span></div>
+<div class="header-top">
+    <img class="mascot" src="https://github.com/wakuwakus-lab/Wakuwaku-General-Goods-Guild/blob/main/img/mascot.png?raw=true" alt="와쿠와쿠 마스코트" onclick="document.getElementById('searchInput').focus()">
+    <div class="logo">와쿠와쿠<span>박스</span></div>
     <div class="badge">SHOP</div>
   </div>
   <div class="search-wrap">
